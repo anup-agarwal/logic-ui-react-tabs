@@ -88,9 +88,8 @@ Here is an example of how you can style the tabs:
 ```
 
 ## Contributing
-
-
 ### Contributions are welcome! Please open an issue or submit a pull request on [github](https://github.com/anup-agarwal/react-tab-component-pure-js)
+
 
 ## License
 ### This project is licensed under the MIT License.
