@@ -24,21 +24,35 @@ export const Tab: React.FC<TabProps> = ({
 }) => {
   return (
     <div className={tabContainerClass}>
-      <div className={tabOptionsClass}>
+      <div className={tabOptionsClass} role="tablist" aria-label="Tabs">
         {tabList.map(({ name }, index) => (
-          <div
+          <button
             key={name}
             className={
               currentTabIndex === index ? selectTabClass : unselectedTabClass
             }
+            role="tab"
+            aria-selected={currentTabIndex === index}
+            aria-controls={`tabpanel-${index}`}
+            id={`tab-${index}`}
             onClick={() => tabClickHandler(index)}
           >
             {name}
-          </div>
+          </button>
         ))}
       </div>
       {tabList.map(({ Component }, index) => {
-        return index === currentTabIndex ? <Component key={index} /> : null
+        return (
+          <div
+            key={index}
+            role="tabpanel"
+            id={`tabpanel-${index}`}
+            aria-labelledby={`tab-${index}`}
+            hidden={currentTabIndex !== index}
+          >
+            {currentTabIndex === index && <Component />}
+          </div>
+        )
       })}
     </div>
   )
