@@ -10,6 +10,7 @@ interface TabProps {
   selectTabClass: string
   unselectedTabClass: string
   tabContainerClass: string
+  tabOptionsClass: string
 }
 
 export const Tab: React.FC<TabProps> = ({
@@ -19,20 +20,23 @@ export const Tab: React.FC<TabProps> = ({
   selectTabClass,
   unselectedTabClass,
   tabContainerClass,
+  tabOptionsClass,
 }) => {
   return (
     <div className={tabContainerClass}>
-      {tabList.map(({ name }, index) => (
-        <div
-          key={name}
-          className={
-            currentTabIndex === index ? selectTabClass : unselectedTabClass
-          }
-          onClick={() => tabClickHandler(index)}
-        >
-          {name}
-        </div>
-      ))}
+      <div className={tabOptionsClass}>
+        {tabList.map(({ name }, index) => (
+          <div
+            key={name}
+            className={
+              currentTabIndex === index ? selectTabClass : unselectedTabClass
+            }
+            onClick={() => tabClickHandler(index)}
+          >
+            {name}
+          </div>
+        ))}
+      </div>
       {tabList.map(({ Component }, index) => {
         return index === currentTabIndex ? <Component key={index} /> : null
       })}

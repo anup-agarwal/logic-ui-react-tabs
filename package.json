@@ -1,14 +1,15 @@
 {
   "name": "react-tab-component-pure-js",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "repository": {
     "type": "git",
     "url": "https://github.com/anup-agarwal/react-tab-component-pure-js.git"
   },
   "description": "A customizable React tab component with no built-in CSS.",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "build": "babel src -d dist --extensions \".js,.jsx,.ts,.tsx\"",
+    "build": "tsc && babel dist -d dist --extensions \".js,.jsx,.ts,.tsx\"",
     "prepublishOnly": "npm run build"
   },
   "peerDependencies": {
@@ -33,6 +34,6 @@
     "tabs",
     "component"
   ],
-  "author": "Your Name",
+  "author": "Anup Agarwal",
   "license": "MIT"
 }

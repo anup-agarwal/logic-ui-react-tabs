@@ -20,7 +20,7 @@ Here’s a basic example of how to use the react-tab-component-pure-js in your R
 
 ```sh
 import React, { useState } from 'react';
-import Tab from 'react-tab-component-pure-js';
+import { Tab } from 'react-tab-component-pure-js';
 
 const Tab1 = () => <div>Content for Tab 1</div>;
 const Tab2 = () => <div>Content for Tab 2</div>;
@@ -45,11 +45,13 @@ const App = () => {
       selectTabClass="selected-tab"
       unselectedTabClass="unselected-tab"
       tabContainerClass="tab-container"
+      tabOptionsClass="tab-options"
     />
   );
 };
 
 export default App;
+
 
 ```
 
@@ -70,6 +72,11 @@ Here is an example of how you can style the tabs:
 ```sh
 .tab-container {
   display: flex;
+  flex-direction: column;
+}
+
+.tab-options {
+  display: flex;
   border-bottom: 1px solid #ccc;
 }
 
@@ -85,6 +92,7 @@ Here is an example of how you can style the tabs:
   padding: 10px 20px;
   cursor: pointer;
 }
+
 ```
 
 ## Contributing
