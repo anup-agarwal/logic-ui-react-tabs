@@ -1,4 +1,4 @@
-# react-tab-component-no-css
+# react-tab-component-pure-js
 
 A customizable React tab component with no CSS, allowing you to style it as you see fit.
 
@@ -7,20 +7,20 @@ A customizable React tab component with no CSS, allowing you to style it as you 
 To install the component, use npm or yarn:
 
 ```sh
-npm install react-tab-component-no-css
+npm install react-tab-component-pure-js
 
 or
 
-yarn add react-tab-component-no-css
+yarn add react-tab-component-pure-js
 ```
 
 Usage
 
-Here’s a basic example of how to use the react-tab-component-no-css in your React project:
+Here’s a basic example of how to use the react-tab-component-pure-js in your React project:
 
 ```sh
 import React, { useState } from 'react';
-import Tab from 'react-tab-component-no-css';
+import Tab from 'react-tab-component-pure-js';
 
 const Tab1 = () => <div>Content for Tab 1</div>;
 const Tab2 = () => <div>Content for Tab 2</div>;
