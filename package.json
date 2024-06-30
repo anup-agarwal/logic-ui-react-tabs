@@ -1,6 +1,6 @@
 {
   "name": "react-tab-component-pure-js",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "repository": {
     "type": "git",
     "url": "https://github.com/anup-agarwal/react-tab-component-pure-js.git"
@@ -13,8 +13,8 @@
     "prepublishOnly": "npm run build"
   },
   "peerDependencies": {
-    "react": "^16.8.0 || ^17.0.0 || ^18.0.0",
-    "react-dom": "^16.8.0 || ^17.0.0 || ^18.0.0"
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0",
