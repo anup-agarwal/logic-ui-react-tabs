@@ -57,7 +57,9 @@ export default App;
 
 ## Props
 ### tabList: An array of objects representing each tab. Each object should have:
-- name: The name of the tab.
+- tabList: An array of objects representing each tab. Each object should have:
+  - name: The name of the tab.
+  - Component: The component to render when the tab is selected.
 - Component: The component to render when the tab is selected.
 - currentTabIndex: The index of the currently selected tab.
 - tabClickHandler: A function to handle tab clicks. It receives the index of the clicked tab.
