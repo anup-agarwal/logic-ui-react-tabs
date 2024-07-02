@@ -1,6 +1,6 @@
 {
   "name": "react-tab-component-pure-js",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "repository": {
     "type": "git",
     "url": "https://github.com/anup-agarwal/react-tab-component-pure-js.git"
@@ -31,6 +31,7 @@
   ],
   "keywords": [
     "react",
+    "react-component",
     "tabs",
     "tab-component",
     "customizable",
@@ -42,5 +43,8 @@
     "tab-navigation"
   ],
   "author": "Anup Agarwal",
-  "license": "MIT"
+  "license": "MIT",
+  "engines": {
+    "node": ">=12.0.0"
+  }
 }

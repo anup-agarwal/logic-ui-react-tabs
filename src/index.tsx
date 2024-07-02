@@ -1,26 +1,26 @@
 import React from "react"
 
 interface TabProps {
-  tabList: {
+  tabList?: {
     name: string
     Component: React.FC
   }[]
-  currentTabIndex: number
-  tabClickHandler: (index: number) => void
-  selectTabClass: string
-  unselectedTabClass: string
-  tabContainerClass: string
-  tabOptionsClass: string
+  currentTabIndex?: number
+  tabClickHandler?: (index: number) => void
+  selectTabClass?: string
+  unselectedTabClass?: string
+  tabContainerClass?: string
+  tabOptionsClass?: string
 }
 
 export const Tab: React.FC<TabProps> = ({
-  tabList,
-  currentTabIndex,
-  tabClickHandler,
-  selectTabClass,
-  unselectedTabClass,
-  tabContainerClass,
-  tabOptionsClass,
+  tabList = [],
+  currentTabIndex = 0,
+  tabClickHandler = () => {},
+  selectTabClass = "",
+  unselectedTabClass = "",
+  tabContainerClass = "",
+  tabOptionsClass = "",
 }) => {
   return (
     <div className={tabContainerClass}>
@@ -41,19 +41,17 @@ export const Tab: React.FC<TabProps> = ({
           </button>
         ))}
       </div>
-      {tabList.map(({ Component }, index) => {
-        return (
-          <div
-            key={index}
-            role="tabpanel"
-            id={`tabpanel-${index}`}
-            aria-labelledby={`tab-${index}`}
-            hidden={currentTabIndex !== index}
-          >
-            {currentTabIndex === index && <Component />}
-          </div>
-        )
-      })}
+      {tabList.map(({ Component }, index) => (
+        <div
+          key={index}
+          role="tabpanel"
+          id={`tabpanel-${index}`}
+          aria-labelledby={`tab-${index}`}
+          hidden={currentTabIndex !== index}
+        >
+          {currentTabIndex === index && <Component />}
+        </div>
+      ))}
     </div>
   )
 }
