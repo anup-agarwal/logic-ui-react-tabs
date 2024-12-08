@@ -1,6 +1,6 @@
 # react-tab-component-pure-js
 
-A customizable React tab component with no CSS, allowing you to style it as you see fit.
+A customizable React tab component with no pre-defined CSS, allowing you to style it as you see fit using classes or inline styles.
 
 ## Installation
 
@@ -46,26 +46,36 @@ const App = () => {
       unselectedTabClass="unselected-tab"
       tabContainerClass="tab-container"
       tabOptionsClass="tab-options"
+      selectTabStyle={{ color: 'white', backgroundColor: 'blue' }}
+      unselectedTabStyle={{ color: 'gray', backgroundColor: 'lightgray' }}
+      tabContainerStyle={{ border: '1px solid black', padding: '10px' }}
+      tabOptionsStyle={{ display: 'flex', gap: '10px' }}
     />
   );
 };
 
 export default App;
-
-
 ```
 
 ## Props
-### tabList: An array of objects representing each tab. Each object should have:
-- tabList: An array of objects representing each tab. Each object should have:
-  - name: The name of the tab.
-  - Component: The component to render when the tab is selected.
-- Component: The component to render when the tab is selected.
-- currentTabIndex: The index of the currently selected tab.
-- tabClickHandler: A function to handle tab clicks. It receives the index of the clicked tab.
-- selectTabClass: The CSS class for the selected tab.
-- unselectedTabClass: The CSS class for the unselected tabs.
-- tabContainerClass: The CSS class for the tab container.
+### Required Props
+- tabList: An array of objects representing each tab.Each object should have:
+  - name: The name of the tab (string).
+  - Component: The component to render when the tab is selected (React.FC).
+- currentTabIndex: The index of the currently selected tab (number).
+
+### Optional Props
+  - tabClickHandler: A function to handle tab clicks. It receives the index of the clicked tab (function).
+  - selectTabClass: The CSS class for the selected tab (string).
+  - unselectedTabClass: The CSS class for the unselected tabs (string).
+  - tabContainerClass: The CSS class for the tab container (string).
+  - tabOptionsClass: The CSS class for the tab options container (string).
+
+### Inline Style Support (Optional Props)
+- selectTabStyle: Inline styles for the selected tab (React.CSSProperties).
+- unselectedTabStyle: Inline styles for the unselected tabs (React.CSSProperties).
+- tabContainerStyle: Inline styles for the tab container (React.CSSProperties).
+- tabOptionsStyle: Inline styles for the tab options container (React.CSSProperties).
 
 
 ## Example Styles
