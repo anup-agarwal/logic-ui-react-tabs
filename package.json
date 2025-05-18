@@ -1,10 +1,6 @@
 {
-  "name": "react-tab-component-pure-js",
-  "version": "1.0.10",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/anup-agarwal/react-tab-component-pure-js.git"
-  },
+  "name": "@logicblocks/react-tabs",
+  "version": "1.0.0",
   "description": "A customizable React tab component with no built-in CSS.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -12,9 +8,28 @@
     "build": "tsc && babel dist -d dist --extensions \".js,.jsx,.ts,.tsx\"",
     "prepublishOnly": "npm run build"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/logicblocks/logic-ui-react-tabs.git"
+  },
+  "keywords": [
+    "react",
+    "tabs",
+    "headless",
+    "unstyled",
+    "no-css",
+    "logicblocks",
+    "ui-component",
+    "typescript"
+  ],
+  "author": "Anup Agarwal",
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
   "peerDependencies": {
-    "react": ">=16.8.0",
-    "react-dom": ">=16.8.0"
+    "react": "^18.0.0 || ^19.0.0",
+    "react-dom": "^18.0.0 || ^19.0.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0",
@@ -22,29 +37,14 @@
     "@babel/preset-env": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
     "@babel/preset-typescript": "^7.0.0",
-    "@types/react": "^17.0.0",
-    "@types/react-dom": "^17.0.0",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
     "typescript": "^4.0.0"
   },
-  "files": [
-    "dist"
-  ],
-  "keywords": [
-    "react",
-    "react-component",
-    "tabs",
-    "tab-component",
-    "customizable",
-    "no-css",
-    "no-css-tabs",
-    "pure-js",
-    "typescript",
-    "react-tabs",
-    "tab-navigation"
-  ],
-  "author": "Anup Agarwal",
-  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "engines": {
-    "node": ">=12.0.0"
+    "node": ">=14.0.0"
   }
 }

@@ -1,26 +1,32 @@
-# react-tab-component-pure-js
+# @logic-ui/react-tabs
 
-A customizable React tab component with no pre-defined CSS, allowing you to style it as you see fit using classes or inline styles.
+A customizable React tab component with **no built-in CSS** — completely style-agnostic and perfect for logic-only UI builds.
 
-## Installation
+---
 
-To install the component, use npm or yarn:
+## 🚀 Installation
 
-```sh
-npm install react-tab-component-pure-js
+Using npm:
 
-or
-
-yarn add react-tab-component-pure-js
+```bash
+npm install @logic-ui/react-tabs
 ```
 
-Usage
+Using yarn:
 
-Here’s a basic example of how to use the react-tab-component-pure-js in your React project:
+```bash
+yarn add @logic-ui/react-tabs
+```
 
-```sh
+---
+
+## 💡 Usage
+
+Here's a basic example of how to use `@logic-ui/react-tabs`:
+
+```tsx
 import React, { useState } from 'react';
-import { Tab } from 'react-tab-component-pure-js';
+import { Tab } from '@logic-ui/react-tabs';
 
 const Tab1 = () => <div>Content for Tab 1</div>;
 const Tab2 = () => <div>Content for Tab 2</div>;
@@ -33,15 +39,11 @@ const App = () => {
     { name: 'Tab 2', Component: Tab2 },
   ];
 
-  const handleTabClick = (index: number) => {
-    setCurrentTabIndex(index);
-  };
-
   return (
     <Tab
       tabList={tabList}
       currentTabIndex={currentTabIndex}
-      tabClickHandler={handleTabClick}
+      tabClickHandler={setCurrentTabIndex}
       selectTabClass="selected-tab"
       unselectedTabClass="unselected-tab"
       tabContainerClass="tab-container"
@@ -57,31 +59,39 @@ const App = () => {
 export default App;
 ```
 
-## Props
-### Required Props
-- tabList: An array of objects representing each tab.Each object should have:
-  - name: The name of the tab (string).
-  - Component: The component to render when the tab is selected (React.FC).
-- currentTabIndex: The index of the currently selected tab (number).
+---
 
-### Optional Props
-  - tabClickHandler: A function to handle tab clicks. It receives the index of the clicked tab (function).
-  - selectTabClass: The CSS class for the selected tab (string).
-  - unselectedTabClass: The CSS class for the unselected tabs (string).
-  - tabContainerClass: The CSS class for the tab container (string).
-  - tabOptionsClass: The CSS class for the tab options container (string).
+## 📦 Props
 
-### Inline Style Support (Optional Props)
-- selectTabStyle: Inline styles for the selected tab (React.CSSProperties).
-- unselectedTabStyle: Inline styles for the unselected tabs (React.CSSProperties).
-- tabContainerStyle: Inline styles for the tab container (React.CSSProperties).
-- tabOptionsStyle: Inline styles for the tab options container (React.CSSProperties).
+### ✅ Required Props
 
+- `tabList`: Array of tab configs:
+  - `name` (string): Tab label
+  - `Component` (React.FC): Component rendered for the tab
+- `currentTabIndex` (number): Currently active tab index
 
-## Example Styles
+### ⚙️ Optional Props
 
-Here is an example of how you can style the tabs:
-```sh
+- `tabClickHandler`: Callback when a tab is clicked — receives index (function)
+- `selectTabClass`: CSS class for the selected tab (string)
+- `unselectedTabClass`: CSS class for unselected tabs (string)
+- `tabContainerClass`: Class for tab wrapper (string)
+- `tabOptionsClass`: Class for tab selector container (string)
+
+### 🎨 Style Props (Optional Inline Styles)
+
+- `selectTabStyle`: Inline style for selected tab
+- `unselectedTabStyle`: Inline style for unselected tabs
+- `tabContainerStyle`: Inline style for outer tab container
+- `tabOptionsStyle`: Inline style for the tab options container
+
+---
+
+## 🎨 Example CSS
+
+Use your own styles, or start with this:
+
+```css
 .tab-container {
   display: flex;
   flex-direction: column;
@@ -104,12 +114,17 @@ Here is an example of how you can style the tabs:
   padding: 10px 20px;
   cursor: pointer;
 }
-
 ```
 
-## Contributing
-### Contributions are welcome! Please open an issue or submit a pull request on [github](https://github.com/anup-agarwal/react-tab-component-pure-js)
+---
 
+## 🤝 Contributing
 
-## License
-### This project is licensed under the MIT License.
+Contributions are welcome!  
+Feel free to [open an issue](https://github.com/anup-agarwal/logic-ui-react-tabs/issues) or submit a pull request on [GitHub](https://github.com/anup-agarwal/logic-ui-react-tabs).
+
+---
+
+## 📄 License
+
+MIT License © [Anup Agarwal](https://github.com/anup-agarwal)
