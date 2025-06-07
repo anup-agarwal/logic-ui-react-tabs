@@ -1,4 +1,4 @@
-# @logic-ui/react-tabs
+# @logicblocks/react-tabs
 
 A customizable React tab component with **no built-in CSS** — completely style-agnostic and perfect for logic-only UI builds.
 
@@ -9,13 +9,13 @@ A customizable React tab component with **no built-in CSS** — completely style
 Using npm:
 
 ```bash
-npm install @logic-ui/react-tabs
+npm install @logicblocks/react-tabs
 ```
 
 Using yarn:
 
 ```bash
-yarn add @logic-ui/react-tabs
+yarn add @logicblocks/react-tabs
 ```
 
 ---
