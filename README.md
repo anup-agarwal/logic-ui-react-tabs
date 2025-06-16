@@ -1,3 +1,7 @@
+[![npm version](https://img.shields.io/npm/v/@logicblocks/react-tabs.svg)](https://www.npmjs.com/package/@logicblocks/react-tabs)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![GitHub stars](https://img.shields.io/github/stars/anup-agarwal/logic-ui-react-tabs)](https://github.com/anup-agarwal/logic-ui-react-tabs/stargazers)
+
 # @logicblocks/react-tabs
 
 A customizable React tab component with **no built-in CSS** — completely style-agnostic and perfect for logic-only UI builds.
